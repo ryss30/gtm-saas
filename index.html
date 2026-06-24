@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orcool MCP · Speed to Winning Creative</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #f8f7f5;
+      --text-dark: #443d3d;
+      --text-light: #ffffff;
+      --black: #000000;
+      --accent-red: #FA3810;
+      --accent-yellow: #FFB516;
+      --accent-green: #45B43B;
+      --accent-blue: #387FFF;
+      --coral: #D97757;
+      --gradient-main: linear-gradient(135deg, #FA3810, #FFB516, #45B43B, #387FFF);
+      --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "Geist Mono", "Courier New", monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-sans); background: var(--bg-primary); color: var(--text-dark); line-height: 1.6; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #e0dcd8; background: var(--bg-primary); position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 20px; font-weight: 700; color: var(--text-dark); }
+    nav { display: flex; gap: 30px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text-dark); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--accent-red); }
+    .cta-button { background: var(--text-dark); color: var(--text-light); padding: 10px 20px; border-radius: 10px; font-size: 14px; font-weight: 500; border: none; cursor: pointer; transition: background-color 0.2s; }
+    .cta-button:hover { background-color: var(--accent-red); }
+    .hero { padding: 80px 40px; text-align: center; background: var(--bg-primary); }
+    .hero-eyebrow { font-size: 14px; font-weight: 500; color: var(--accent-red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .hero-headline { font-size: 56px; font-weight: 700; line-height: 1.2; margin-bottom: 30px; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 18px; color: var(--text-dark); max-width: 600px; margin: 0 auto 40px; line-height: 1.8; }
+    .hero-ctas { display: flex; gap: 20px; justify-content: center; margin-bottom: 20px; }
+    .cta-primary { background: var(--accent-red); color: var(--text-light); padding: 12px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; transition: background-color 0.2s; }
+    .cta-primary:hover { background-color: #E63008; }
+    .cta-ghost { background: transparent; color: var(--accent-red); padding: 12px 28px; border: 1px solid var(--accent-red); border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 0.2s; }
+    .cta-ghost:hover { background-color: var(--accent-red); color: var(--text-light); }
+    .hero-microcopy { font-size: 13px; color: var(--text-dark); opacity: 0.7; }
+    .ttw-block { background: var(--text-light); border-left: 4px solid var(--accent-red); padding: 20px; margin: 40px auto; max-width: 500px; text-align: left; border-radius: 6px; }
+    .ttw-block strong { color: var(--accent-red); }
+    .dark-shift { background: var(--black); color: var(--text-light); padding: 80px 40px; text-align: center; }
+    .dark-shift h2 { font-size: 42px; font-weight: 700; line-height: 1.3; max-width: 700px; margin: 0 auto; }
+    .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 80px 40px; background: var(--bg-primary); max-width: 1200px; margin: 0 auto; }
+    .panel { background: var(--text-light); border-radius: 12px; padding: 30px; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .panel-tag { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--accent-red); margin-bottom: 12px; }
+    .panel h3 { font-size: 22px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px; }
+    .panel p { font-size: 15px; color: var(--text-dark); margin-bottom: 20px; flex-grow: 1; }
+    .panel-ship { font-family: var(--font-mono); font-size: 13px; color: var(--accent-red); margin-top: auto; padding-top: 16px; border-top: 1px solid #e0dcd8; }
+    .insights { background: var(--bg-primary); padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+    .insights h2 { font-size: 36px; font-weight: 700; margin-bottom: 50px; text-align: center; }
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+    .insight { text-align: center; }
+    .insight h4 { font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px; }
+    .insight p { font-size: 15px; color: var(--text-dark); line-height: 1.8; }
+    .connect { background: var(--black); color: var(--text-light); padding: 80px 40px; }
+    .connect-content { max-width: 900px; margin: 0 auto; }
+    .connect h2 { font-size: 42px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+    .connect-subhead { font-size: 18px; text-align: center; margin-bottom: 50px; opacity: 0.9; }
+    .accordion-group { margin-bottom: 40px; }
+    .accordion-item { border-bottom: 1px solid #333; }
+    .accordion-header { padding: 20px; background: var(--black); color: var(--text-light); cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; font-size: 16px; }
+    .accordion-header.active { background-color: var(--accent-red); }
+    .accordion-content { padding: 20px; background: #0a0a0a; display: none; font-size: 14px; line-height: 1.8; }
+    .accordion-content.show { display: block; }
+    .setup-steps { font-family: var(--font-mono); font-size: 13px; background: #1a1a1a; padding: 15px; border-radius: 8px; margin-top: 10px; color: #ccc; }
+    .setup-steps code { color: var(--accent-red); }
+    .compare-table { width: 100%; margin: 30px 0; border-collapse: collapse; font-size: 14px; }
+    .compare-table th { text-align: left; padding: 10px; border-bottom: 2px solid #333; }
+    .compare-table td { padding: 10px; border-bottom: 1px solid #333; }
+    .faq { background: var(--bg-primary); padding: 80px 40px; }
+    .faq-content { max-width: 700px; margin: 0 auto; }
+    .faq h2 { font-size: 36px; font-weight: 700; margin-bottom: 40px; text-align: center; }
+    .faq-accordion-item { border-bottom: 1px solid #d0ccc8; margin-bottom: 20px; }
+    .faq-header { padding: 16px 0; cursor: pointer; font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; }
+    .faq-header:hover { color: var(--accent-red); }
+    .faq-header.active { color: var(--accent-red); }
+    .faq-answer { padding: 0 0 16px 0; display: none; font-size: 15px; color: var(--text-dark); line-height: 1.8; }
+    .faq-answer.show { display: block; }
+    footer { background: var(--black); color: var(--text-light); padding: 50px 40px; text-align: center; border-top: 1px solid #333; }
+    footer p { font-size: 13px; opacity: 0.6; margin: 10px 0; }
+    footer a { color: var(--coral); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">orcool</div>
+  <nav>
+    <a href="#signals">Signals</a>
+    <a href="#connect">Connect</a>
+    <a href="#faq">FAQ</a>
+    <button class="cta-button">Pricing</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">For lean GTM teams shipping at speed</div>
+  <h1 class="hero-headline">Speed to winning creative.<br>Paired with durability.</h1>
+  <div class="ttw-block"><strong>Time-to-Winner:</strong> calendar days from cycle start to a concept that passes your KPI gate and holds in production. Fast ideas that survive.</div>
+  <p class="hero-sub">Orcool MCP brings your creative intelligence into Claude, ChatGPT, and Cursor. See competitor moves. Recognize winning patterns. Build briefs that stick—before you spend on media.</p>
+  <div class="hero-ctas">
+    <button class="cta-primary">Connect Now</button>
+    <button class="cta-ghost">View Demo</button>
+  </div>
+  <p class="hero-microcopy">No setup. Connect in 30 seconds. Free tier works.</p>
+</section>
+
+<section class="dark-shift">
+  <h2>Most teams spend months finding their first winning creative. By then, the market has moved. Your competitors are shipping. You're still testing.</h2>
+</section>
+
+<section class="panels" id="signals">
+  <div class="panel">
+    <div class="panel-tag">Real signals</div>
+    <h3>Competitor moves in the press</h3>
+    <p>New markets. Strategic shifts. Sponsorships. Partnerships. Not ad-creative launches—moves that reshape your playbook. Get alerts per competitor.</p>
+    <div class="panel-ship">Slack or MCP. No polling.</div>
+  </div>
+  <div class="panel">
+    <div class="panel-tag">Winning mechanics</div>
+    <h3>Ad-mechanics that stick in your category</h3>
+    <p>Hook type. Format. Audience tension. Why it works. Plus the variations that scale. See what's durable before your brief.</p>
+    <div class="panel-ship">Pattern match → brief → faster to win.</div>
+  </div>
+  <div class="panel">
+    <div class="panel-tag">Category pulse</div>
+    <h3>The week in your category</h3>
+    <p>What's trending. What's burning out. Where competitors are moving. One source of truth, every Sunday.</p>
+    <div class="panel-ship">Weekly in your feed.</div>
+  </div>
+</section>
+
+<section class="insights">
+  <h2>How it works</h2>
+  <div class="insight-grid">
+    <div class="insight"><h4>1. Sense</h4><p>Orcool monitors your competitors, category trends, and what's winning in the wild. Structured, daily.</p></div>
+    <div class="insight"><h4>2. Express</h4><p>Patterns become briefs. Your team grades them. The loop learns your taste in real time.</p></div>
+    <div class="insight"><h4>3. Learn</h4><p>Brand Lens calibrates to your KPI. Every yes/no tightens the machine. Time-to-Winner accelerates.</p></div>
+  </div>
+</section>
+
+<section class="connect" id="connect">
+  <div class="connect-content">
+    <h2>Three ways to use Orcool</h2>
+    <p class="connect-subhead">One server. Any interface.</p>
+    <div class="accordion-group">
+      <div class="accordion-item">
+        <div class="accordion-header active"><span>Claude</span><span>+</span></div>
+        <div class="accordion-content show"><strong>Best for:</strong> Teams that live in Claude. Full access to all signals, briefs, and intelligence feeds.<br><br><strong>Steps:</strong> 1. Open Claude → Settings → Connectors → Add custom connector 2. Paste https://mcp.orcool.com 3. Sign in with your Orcool account 4. In any chat, enable Orcool from the tools menu<br><br><strong>What you get:</strong> Real-time alerts, pattern matching, weekly category reports, and one-click brief export.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>ChatGPT</span><span>+</span></div>
+        <div class="accordion-content"><strong>Best for:</strong> Teams building workflows in ChatGPT. Intelligence feeds without platform switching.<br><br><strong>Steps:</strong> 1. Open ChatGPT → Settings → Apps → Advanced settings 2. Create app → Paste https://mcp.orcool.com 3. Confirm and sign in 4. Orcool appears under + → More in any chat<br><br><strong>Note:</strong> ChatGPT self-serve write-access requires a call. Read-tier is instant.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Cursor</span><span>+</span></div>
+        <div class="accordion-content"><strong>Best for:</strong> Developers using Cursor as an IDE. Ground your AI context in live market signals.<br><br><strong>Steps:</strong> 1. Cursor → Settings → MCP → Add new server 2. Paste https://mcp.orcool.com 3. Sign in 4. Start prompting. Orcool signals are available in your chat context.</div>
+      </div>
+    </div>
+    <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin-top: 30px;"><strong style="color: var(--coral);">Set it all up in one paste:</strong> <div class="setup-steps">Set up your brand. Add competitors, trends, and reviews. Ground Orcool in your category.<br><br>Prompt: "Set me up for [category]. Competitors: [list 3–5]. My KPI gate: [metric]."</div></div>
+    <table class="compare-table">
+      <thead><tr><th>Feature</th><th>Orcool MCP</th><th>Slack</th></tr></thead>
+      <tbody><tr><td>Real-time alerts</td><td>✓</td><td>✓</td></tr><tr><td>Pattern matching</td><td>✓</td><td>✓</td></tr><tr><td>Works in Claude, ChatGPT, Cursor</td><td>✓</td><td>—</td></tr><tr><td>Brief export</td><td>✓</td><td>Manual</td></tr><tr><td>Setup time</td><td>&lt; 1 min</td><td>5–10 min</td></tr></tbody>
+    </table>
+    <p style="margin-top: 30px; font-size: 14px; opacity: 0.8;"><strong>First week is free.</strong> After that, read-tier ($250/mo per market) or deeper access by plan.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-content">
+    <h2>FAQ</h2>
+    <div class="faq-accordion-item">
+      <div class="faq-header"><span>What if our media budget isn't big yet?</span><span>›</span></div>
+      <div class="faq-answer">Intelligence tier works at any scale. See competitor patterns before you spend. No minimum media budget.</div>
+    </div>
+    <div class="faq-accordion-item">
+      <div class="faq-header"><span>What's inside 'Alerts'?</span><span>›</span></div>
+      <div class="faq-answer">Press coverage, product launches, market expansions, strategic partnerships. Not ad-creative launches—strategic moves that reshape your playbook.</div>
+    </div>
+    <div class="faq-accordion-item">
+      <div class="faq-header"><span>Can we export patterns as briefs?</span><span>›</span></div>
+      <div class="faq-answer">Yes. Each pattern includes hook, format, audience tension, and why-it-works. Hand to your creative team or use as brief scaffold.</div>
+    </div>
+    <div class="faq-accordion-item">
+      <div class="faq-header"><span>How often do reports update?</span><span>›</span></div>
+      <div class="faq-answer">Alerts are real-time. Patterns update daily. Category reports ship weekly. Everything syncs to Slack or MCP in real time.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">orcool</div>
+  <p>Creative intelligence for teams that ship at speed.</p>
+  <p><a href="https://mcp.orcool.com">MCP Server</a> · <a href="https://docs.orcool.com">Docs</a> · <a href="https://twitter.com/orcool">Twitter</a></p>
+  <p style="margin-top: 20px; opacity: 0.4;">© 2026 Orcool. Built for humans and AI.</p>
+</footer>
+
+<script>
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+      document.querySelectorAll('.accordion-header').forEach(h => {
+        h.classList.remove('active');
+        h.nextElementSibling.classList.remove('show');
+      });
+      if (!isActive) {
+        header.classList.add('active');
+        content.classList.add('show');
+      }
+    });
+  });
+
+  const faqHeaders = document.querySelectorAll('.faq-header');
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      header.classList.toggle('active');
+      content.classList.toggle('show');
+    });
+  });
+</script>
+
+</body>
+</html>
