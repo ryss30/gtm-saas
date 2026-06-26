@@ -3,15 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orcool · Native stories, tested then scaled</title>
-<meta name="description" content="Create native narratives in minutes, test on your account, scale through influencers on cost-per-action.">
-<!--
-  Orcool GTM — Growth SaaS landing.
-  For teams that own their content distribution and work with influencers.
-  Workflow: Create narrative → Test on own account → Scale via influencers (cost-per-action).
-  Tokens from live site CSS: bg #f8f7f5 · ink #443D3D · dark #000 · font Geist + Geist Mono.
-  MCP Server URL: https://mcp.orcool.com
--->
+<title>Orcool · Ship native stories. Test on your reels. Scale through influencers.</title>
+<meta name="description" content="Write the narrative in minutes. Test on your own reels for two weeks free. Scale through influencers on cost-per-action. Orcool for growth SaaS teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -37,7 +30,7 @@
 
   header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .logo{height:22px;width:auto;display:block}
+  .logo{height:50px;width:auto;display:block}
   .pill{display:inline-block;background:var(--ink);color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:9px 18px;border-radius:10px;transition:background-color .14s ease}
   .pill:hover{background:#332e2e}
 
@@ -57,16 +50,17 @@
   /* hero */
   .hero{position:relative;text-align:center;padding:78px 0 96px;overflow:hidden}
   .hero .eyebrow{display:inline-block;margin-bottom:18px}
-  .hero h1{max-width:760px;margin:0 auto 18px}
-  .hero .sub{font-size:20px;color:var(--ink);max-width:560px;margin:0 auto 30px}
+  .hero h1{max-width:820px;margin:0 auto 18px}
+  .hero .sub{font-size:20px;color:var(--ink);max-width:600px;margin:0 auto 30px;line-height:1.55}
   .hero .micro{margin-top:18px;color:var(--grey);font-size:15px;line-height:1.7}
   .hero .micro b{color:var(--ink);font-weight:600}
   .glow{position:absolute;left:50%;transform:translateX(-50%);bottom:-120px;width:120%;height:320px;
     background:linear-gradient(135deg,var(--red),var(--yellow),var(--green),var(--blue));
     filter:blur(90px);opacity:.30;pointer-events:none;border-radius:50%;will-change:transform;backface-visibility:hidden}
 
-  .loop{max-width:720px;margin:44px auto 0}
-  .loopgrid{display:flex;align-items:flex-start;justify-content:center;gap:16px}
+  /* loop device */
+  .loop{max-width:760px;margin:52px auto 0}
+  .loopgrid{display:flex;align-items:flex-start;justify-content:center;gap:20px;flex-wrap:wrap}
   .li{display:flex;flex-direction:column;align-items:center}
   .li .w{font-family:var(--serif);font-size:40px;line-height:1;color:var(--ink)}
   .li .a{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--red);margin-top:10px}
@@ -79,17 +73,18 @@
   .center{text-align:center}
   .center .sub{max-width:560px;margin:14px auto 0}
 
-  /* feed panels */
+  /* stage panels */
   .panels{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px;text-align:left}
   .panel{background:var(--panel);border-radius:16px;padding:26px;color:var(--ink);box-shadow:0 8px 30px rgba(0,0,0,.18);display:flex;flex-direction:column}
   .panel .tag{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
-  .panel.blue .tag{color:var(--blue)} .panel.green .tag{color:var(--green)}
+  .panel.blue .tag{color:var(--blue)}
+  .panel.green .tag{color:var(--green)}
   .panel h3{margin-bottom:8px;color:var(--ink);line-height:1.3;min-height:47px}
   .panel p{font-size:15px;color:#5a5450}
   .panel .ship{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink);font-family:var(--mono);line-height:1.7}
   .panel .ship .m{color:var(--grey)}
 
-  /* connect: url card + accordions */
+  /* connect */
   .urlcard{margin-top:8px;max-width:640px}
   .urllab{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8f8d8a;margin-bottom:8px}
   .urlfield{display:flex;align-items:center;gap:10px}
@@ -110,7 +105,6 @@
   .acc ol b{color:#fff;font-weight:600}
   .acc .ar{color:#7a7a7a;padding:0 1px}
 
-  /* query boxes */
   .qbox{background:#0c0c0c;border:1px solid #232323;border-left:3px solid var(--green);border-radius:12px;padding:14px 16px;margin-top:10px;position:relative;max-width:760px}
   .qbox .ql{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
   .qbox p{color:#EDEBE8;font-size:15px;margin:0;padding-right:64px;font-family:var(--serif);font-style:italic}
@@ -153,9 +147,10 @@
   footer .who{margin-top:8px;font-family:var(--mono);font-size:12px}
 
   @media(min-width:740px){
-    h1{font-size:62px} h2{font-size:36px}
+    h1{font-size:58px} h2{font-size:36px}
     .panels{grid-template-columns:1fr 1fr 1fr}
     .compare{grid-template-columns:1fr 1fr}
+    .logo{height:50px}
   }
 </style>
 </head>
@@ -163,24 +158,24 @@
 
 <header>
   <div class="wrap nav">
-    <img src="data:image/png;base64,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 qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxz GXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0 G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjX Mq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0 G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjX Mq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY" alt="Orcool" class="logo">
+    <img class="logo" src="orcool-logo.png" alt="Orcool">
     <a class="pill" href="#connect">Connect Orcool</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow">For growth teams running their own channels</span>
+    <span class="eyebrow">For growth SaaS teams</span>
     <h1>Ship native stories your audience wants.<br>From your account to influencer networks.</h1>
     <p class="sub">Write the narrative in minutes. Test on your own reels. Scale through influencers on cost-per-action.</p>
     <div class="btnrow" style="justify-content:center">
       <a class="btn" href="#connect">Connect Orcool</a>
-      <a class="btn ghost" href="#theloop">See the loop</a>
+      <a class="btn ghost" href="#loop">See the loop</a>
     </div>
-    <p class="micro"><b>Two weeks free. No card required.</b><br>Test on your account at zero cost, then pay for reach when it works.</p>
+    <p class="micro"><b>Two weeks free on your own channels.</b><br>No card. No bullshit. Just start.</p>
 
-    <div class="loop">
+    <div class="loop" id="loop">
       <div class="loopgrid">
         <div class="li"><span class="w">Create</span><span class="a">in minutes</span></div>
         <span class="arr">&rarr;</span>
@@ -196,37 +191,37 @@
 <!-- SHIFT -->
 <section class="dark">
   <div class="wrap">
-    <span class="eyebrow">The shift</span>
-    <h2 style="margin-top:14px;max-width:700px">Most teams burn months and money testing narratives on influencer budgets. Then find what works. By then the story is old.</h2>
-    <p style="margin-top:16px;max-width:640px">Orcool lets you test for free first, on your own account. Prove the narrative works in the wild. Then hand the winning story to influencers and pay on cost-per-action. Spend follows results.</p>
-    <p style="margin-top:14px;max-width:640px">The metric is Time-to-Winner: days from story concept to a narrative that works on an influencer account. Test cheap on your channel first, then scale the proven story.</p>
+    <span class="eyebrow">The problem</span>
+    <h2 style="margin-top:14px;max-width:740px">Generic video ads are easy to scroll past. Native stories are not.</h2>
+    <p style="margin-top:16px;max-width:660px">Most SaaS video feels like a feature tour with a voiceover. The audience knows it's an ad before the second frame. They scroll. You pay anyway.</p>
+    <p style="margin-top:14px;max-width:660px">The content that actually holds attention looks like it belongs in the feed. Real narrative, real tension, real payoff. Written for the platform, not adapted from a slide deck. The teams winning on social right now write this kind of story, test it on their own channels first, then route the winners to influencers on cost-per-action. Orcool is how you run that loop without a full creative agency.</p>
   </div>
 </section>
 
-<!-- THREE STEPS -->
-<section class="dark center" id="theloop" style="padding-top:0">
+<!-- THREE STAGES -->
+<section class="dark center" style="padding-top:0">
   <div class="wrap">
     <span class="eyebrow">The loop</span>
-    <h2 style="margin-top:14px">Story, test, scale. One workflow.</h2>
-    <p class="sub">Grounded in what is winning in your category. Test free on your account. Influencer-ready when you're ready to spend.</p>
+    <h2 style="margin-top:14px">Three stages. One pipeline.</h2>
+    <p class="sub">Create once. Test on channels you already own. Scale through influencers only when something proves out.</p>
     <div class="panels">
       <div class="panel">
         <div class="tag">Create</div>
-        <h3>Native narratives in minutes</h3>
-        <p>A story built for your audience, in a storyboard you can shoot. Orcool grounds it in what is winning in your category right now, so you start from a proven angle, not blank.</p>
-        <div class="ship">Storyboard → you shoot<br><span class="m">Ready in your Orcool workspace</span></div>
+        <h3>A native narrative, not a generic ad</h3>
+        <p>Write the story for the specific platform and audience. Hook, tension, payoff, CTA. Orcool reads what's working in your category and shapes the narrative around it. In minutes, not days.</p>
+        <div class="ship">MCP: create_concept, export_script<br><span class="m">2 weeks free on your own reels</span></div>
       </div>
       <div class="panel blue">
         <div class="tag">Test</div>
-        <h3>Prove it on your own account</h3>
-        <p>Post it as a reel or organic spot first. Your account is the cheapest test you have. Keep what holds, kill what does not, before a cent goes to distribution.</p>
-        <div class="ship">Own content is your R&D<br><span class="m">No media spend required</span></div>
+        <h3>Post to your own account. Read the signal.</h3>
+        <p>Run the story on your own reels before you spend on distribution. Two weeks free. Watch what holds attention and what drops off. Orcool tracks it. Only the proven ones go further.</p>
+        <div class="ship">MCP: list_insights, top_performers<br><span class="m">Your account, your data, your signal</span></div>
       </div>
       <div class="panel green">
         <div class="tag">Scale</div>
-        <h3>Amplify through influencers</h3>
-        <p>Hand the winning story to influencers. Pay on cost-per-action. You scale the version that already earned attention, with reach you only pay for when it performs.</p>
-        <div class="ship">Paid reach behind proof<br><span class="m">Influencer-ready brief exported</span></div>
+        <h3>Route winners to influencers on cost-per-action</h3>
+        <p>Once a story proves out on your channel, Orcool routes it to a matched influencer network. You pay per action, not per post. No upfront guarantees to influencers whose audiences you haven't verified.</p>
+        <div class="ship">MCP: route_to_network, track_cpa<br><span class="m">Cost-per-action, no upfront spend</span></div>
       </div>
     </div>
   </div>
@@ -237,7 +232,7 @@
   <div class="wrap">
     <span class="eyebrow">Connect</span>
     <h2 style="margin-top:14px">Add Orcool to your agent.</h2>
-    <p style="margin-top:14px;max-width:600px">Paste one URL into Claude, ChatGPT, or Cursor. Sign in with a magic link. From there it runs on its own, co-piloting your narrative creation and influencer brief export.</p>
+    <p style="margin-top:14px;max-width:600px">Paste one URL into Claude, ChatGPT, or Cursor. Sign in with a magic link. The loop runs from there.</p>
 
     <div class="urlcard">
       <div class="urllab">MCP Server URL</div>
@@ -254,9 +249,9 @@
       <summary><span class="badge" style="background:#D97757"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><g stroke="#fff" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/><line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/></g></svg></span> Claude</summary>
       <ol>
         <li>Copy the MCP server URL above.</li>
-        <li>Open <b>Claude</b> <span class="ar">&rarr;</span> Settings <span class="ar">&rarr;</span> Connectors <span class="ar">&rarr;</span> <b>Add custom connector</b> <span class="ar">&rarr;</span> paste the URL <span class="ar">&rarr;</span> click <b>Add</b>.</li>
-        <li>Sign in when prompted (magic link).</li>
-        <li><b>Turn Orcool on in your chat</b> (the tools menu), then start writing narratives.</li>
+        <li>Open <b>Claude</b> <span class="ar">&rarr;</span> Customize <span class="ar">&rarr;</span> Connectors <span class="ar">&rarr;</span> <b>+</b> <span class="ar">&rarr;</span> paste the name and the URL <span class="ar">&rarr;</span> click <b>Add</b>.</li>
+        <li>Sign in when prompted (magic link, no password).</li>
+        <li><b>Turn Orcool on in your chat</b> (the tools menu in the conversation), then run your prompt.</li>
       </ol>
     </details>
 
@@ -265,33 +260,59 @@
       <ol>
         <li>Copy the MCP server URL above.</li>
         <li>Open <b>ChatGPT</b> <span class="ar">&rarr;</span> Settings <span class="ar">&rarr;</span> Apps <span class="ar">&rarr;</span> Advanced settings <span class="ar">&rarr;</span> <b>Create app</b> <span class="ar">&rarr;</span> paste the URL <span class="ar">&rarr;</span> confirm.</li>
-        <li>Sign in when prompted. Orcool tools are now available in your chats.</li>
+        <li>Sign in when prompted. Orcool then shows under <b>+ &rarr; More</b> in any chat.</li>
       </ol>
     </details>
 
     <details class="acc">
-      <summary><span class="badge" style="background:#2a2a2a"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l15 8.5-6.5 1.6L9.5 21z" fill="#fff"/></svg></span> Cursor</summary>
+      <summary><span class="badge" style="background:#2a2a2a"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l15 8.5-6.5 1.6L9.5 21z" fill="#fff"/></svg></span> Cursor &amp; other clients</summary>
       <ol>
         <li>Copy the MCP server URL above.</li>
         <li>In Cursor: <b>Settings</b> <span class="ar">&rarr;</span> MCP <span class="ar">&rarr;</span> <b>Add new server</b> <span class="ar">&rarr;</span> paste the URL.</li>
-        <li>Sign in when prompted. Orcool is live in your MCP calls.</li>
+        <li>Sign in when prompted. Orcool tools are available in your agent sessions from there.</li>
       </ol>
     </details>
 
-    <p class="note">First time? Write one line: "In my category, give me a native story angle that is proven right now, as a storyboard I can shoot this week."</p>
+    <div class="lab">Once you're in, start here</div>
+    <details class="acc">
+      <summary><span class="badge" style="background:#FA3810"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4.5" y="3" width="13" height="18" rx="2"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg></span> Set up your brand in one paste</summary>
+      <div style="padding:6px 16px 18px">
+        <p class="note" style="margin:8px 0 12px">Fill the brackets and paste this once. It onboards your brand, pulls competitors, inspiration, and reviews, then tells you what's ready.</p>
+        <div style="position:relative">
+          <button class="copy" data-target="#setupPrompt">Copy</button>
+          <pre id="setupPrompt" class="setuppre">You have the Orcool MCP connected. Onboard my brand, fill its sources, then show me what's ready.
+
+My brand
+- Name: [YourApp]
+- Website: [https://yourapp.com]
+- Market / country: [US]
+- Category: [saas / mobile_app / ecommerce]
+- Competitors (2-3): [Competitor A, Competitor B]
+- Inspiration (handle or hashtag): [#yourcategory]
+- Reviews: pasted below, or pull them from [my App Store / Trustpilot URL]
+
+Steps
+1. Brand: studio_list_brands; if missing, studio_create_brand (name, websiteUrl, countries, productCategory).
+2. Competitors: for each, search_advertisers on meta_ad_library, pick the verified match, then studio_create_competitor + studio_create_competitor_source. Trial allows 3 reference sources total.
+3. Inspiration: studio_create_inspiring_reference_source (profile handle or keyword).
+4. Reviews: if I pasted reviews, studio_create_review for each; if not, fetch 10-15 recent ones via web browsing then create them. Do not skip silently. Then studio_analyze_reviews.
+5. Trends: studio_list_global_trends, summarize the top 5 for my market.
+6. Read back: studio_list_competitor_references, studio_list_inspiring_references, studio_list_insights. Wait a minute and re-check if empty.
+
+Give me the 3 strongest competitor hooks, 2 inspiration angles, and the top review insight. Say plainly what is populated and what is still loading.
+
+Reviews:
+[paste 5-15 reviews here, or leave a reviews URL above]</pre>
+        </div>
+      </div>
+    </details>
 
     <div class="qbox">
-      <button class="copy" data-c="In my category, give me a native story angle that is proven right now, as a storyboard I can shoot this week.">Copy</button>
-      <div class="ql">Start here</div>
-      <p>In my category, give me a native story angle that is proven right now, as a storyboard I can shoot this week.</p>
+      <button class="copy" data-c="Write a native story concept for [my product] targeting [audience] on [TikTok / Instagram Reels]. Keep it feeling organic to the feed, not like an ad.">Copy</button>
+      <div class="ql">Then, first concept</div>
+      <p>Write a native story concept for [my product] targeting [audience] on [TikTok / Instagram Reels]. Keep it feeling organic to the feed, not like an ad.</p>
     </div>
-
-    <div class="lab" style="margin-top:24px">Once your story wins, hand it off</div>
-    <div class="qbox">
-      <button class="copy" data-c="Turn the winning version into a one-page brief my influencers can shoot from, with the hook, beats, and what counts as a win.">Copy</button>
-      <div class="ql">Influencer brief</div>
-      <p>Turn the winning version into a one-page brief my influencers can shoot from, with the hook, beats, and what counts as a win.</p>
-    </div>
+    <p class="note">First time? The paste sets your brand up. Your first story concept and trend summary come back right away. Competitor hooks land in about a minute.</p>
   </div>
 </section>
 
@@ -299,37 +320,42 @@
 <section id="firstwin">
   <div class="wrap">
     <span class="eyebrow">First win</span>
-    <h2 style="margin-top:14px">From paste to a winning story, same week.</h2>
+    <h2 style="margin-top:14px">From paste to a live story, same session.</h2>
     <div class="steps">
-      <div class="step"><div class="n"></div><div><div class="t">T+0</div><h4>Connect the MCP</h4><p>Paste the URL into Claude, ChatGPT, or Cursor. No setup, no auth screen.</p></div></div>
-      <div class="step"><div class="n"></div><div><div class="t">T+10 min</div><h4>Create your first narrative</h4><p>Write one line asking for a story angle grounded in what works in your category now. Orcool gives you a storyboard.</p></div></div>
-      <div class="step"><div class="n"></div><div><div class="t">T+2 days</div><h4>Test on your own reel</h4><p>Post it organic. Your account is your free R&D. Keep what holds, kill what does not. Zero spend.</p></div></div>
-      <div class="step"><div class="n"></div><div><div class="t">T+7 days</div><h4>Hand the winner to influencers</h4><p>Export a clean brief. Pay cost-per-action. You only put budget behind a narrative that already worked.</p></div></div>
+      <div class="step"><div class="n"></div><div><div class="t">T+0</div><h4>Connect the MCP</h4><p>Paste the URL into Claude, ChatGPT, or Cursor. Sign in with a magic link.</p></div></div>
+      <div class="step"><div class="n"></div><div><div class="t">T+2 min</div><h4>Brief your brand</h4><p>Paste the onboarding prompt. Orcool reads your category, pulls competitor narratives, and pulls trends.</p></div></div>
+      <div class="step"><div class="n"></div><div><div class="t">T+5 min</div><h4>First story concept</h4><p>Ask for a native story concept. You get a hook, a narrative arc, and a CTA written for your platform.</p></div></div>
+      <div class="step"><div class="n"></div><div><div class="t">Week 1-2</div><h4>Test on your reels</h4><p>Post it to your own account. Free for two weeks. Watch what the audience tells you in the engagement data.</p></div></div>
+      <div class="step"><div class="n"></div><div><div class="t">Week 3+</div><h4>Scale the winner</h4><p>Route the story that proved out to matched influencers. Pay per action, not per post. No guesswork.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- MCP vs OWN ACCOUNT -->
+<!-- OWN CHANNELS vs INFLUENCERS -->
 <section style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow">Own account vs. influencers</span>
-    <h2 style="margin-top:14px">Your channel is the test. Influencers are the reach.</h2>
-    <p class="muted" style="margin-top:14px;max-width:600px">Same narrative. Different investment and scale.</p>
+    <span class="eyebrow">Why own channels first</span>
+    <h2 style="margin-top:14px">Your channels are the proving ground. Influencers are the multiplier.</h2>
+    <p class="muted" style="margin-top:14px;max-width:600px">Spending on influencers before you know what story works is expensive guesswork.</p>
     <div class="compare">
       <div class="cbox">
-        <div class="ct">Own account · your R&D</div>
+        <div class="ct">
+          Influencer-first (the old way)
+        </div>
         <ul>
-          <li>Zero media spend. Organic reach, but you own all the data.</li>
-          <li>Kill underperformers before influencer budgets.</li>
-          <li>Test at scale you control.</li>
+          <li>Brief an influencer, wait for the post, read the result.</li>
+          <li>If the story misses, you pay for the lesson.</li>
+          <li>No signal on what to fix before the next spend.</li>
+          <li>Hard to iterate at the pace social platforms reward.</li>
         </ul>
       </div>
       <div class="cbox lead">
-        <div class="ct">Influencer distribution · your scale</div>
+        <div class="ct">Test-first, then scale (Orcool)</div>
         <ul>
-          <li>Cost-per-action: only pay when it performs on their audience.</li>
-          <li>Hand the proven story, not a guess.</li>
-          <li>Paid reach backs the narrative you already validated.</li>
+          <li>Write the story in minutes. Post to your own account.</li>
+          <li>Two weeks free. Read the signal from your own audience.</li>
+          <li>Only the stories that hold attention go to influencers.</li>
+          <li>Pay per action when you scale. No upfront guarantees.</li>
         </ul>
       </div>
     </div>
@@ -341,28 +367,30 @@
   <div class="wrap">
     <span class="eyebrow">Questions</span>
     <h2 style="margin-top:14px">The honest answers.</h2>
-    <details><summary>How do we handle influencer payouts?</summary>
-      <p>Cost-per-action: you pay for reach and conversions the story earns, not a flat fee up front. You only put budget behind a narrative that already proved itself on your account.</p></details>
-    <details><summary>Can we A/B test narratives before influencer launch?</summary>
-      <p>That is the whole point. You post variants as reels or organic spots on your account first. Only the version that holds gets handed to influencers, so paid reach goes behind a proven story.</p></details>
-    <details><summary>Do you have an influencer network pre-loaded?</summary>
-      <p>You bring the relationships or we help source them. Orcool is the story and the brief. Any influencer can shoot from a clean brief. Cost-per-action sits on distribution you control.</p></details>
-    <details><summary>What if our account is small?</summary>
-      <p>Orcool grounds stories in category signals, not your follower count. A narrative that works is a narrative that works, regardless of your account size. Test cheap, then scale.</p></details>
-    <details><summary>How is this different than just writing scripts?</summary>
-      <p>Grounding in live signals (what works now), testing at zero cost on your own channel, then exporting a brief influencers can scale. Script plus proof plus distribution.</p></details>
+    <details><summary>What makes a story "native"?</summary>
+      <p>It looks and sounds like something the audience would watch and share even if it weren't an ad. Organic pacing, real tension, a payoff that doesn't feel forced. Orcool reads what's working in your category and writes around those patterns. A feature demo with a voiceover is not native.</p></details>
+    <details><summary>Do I need a production team?</summary>
+      <p>No. You write the narrative through Orcool, post it to your own channel as a first test. If you have a phone and a clear brief, you have what you need to start.</p></details>
+    <details><summary>How does the influencer network work?</summary>
+      <p>Once a story proves out on your own channel, Orcool matches it to creators in your category and routes it on cost-per-action. You define the action, you approve the creators, you pay when results happen. No upfront spend per post.</p></details>
+    <details><summary>What does "two weeks free" cover?</summary>
+      <p>You get the full Create and Test stages at no cost for your first two weeks. That includes writing native story concepts, refining them, and posting to your own reels to read the signal. Influencer distribution (Scale) is a paid stage.</p></details>
+    <details><summary>How does sign-in work?</summary>
+      <p>Paste the MCP URL into your client. It opens a browser tab, you enter your email, and we send a one-click magic link. No password, no separate account. After that the tools are live in every session.</p></details>
+    <details><summary>What does it cost after the free period?</summary>
+      <p>The Create and Test loop runs at around $250 per month. The Scale stage (influencer routing) is cost-per-action on top. Full production support with Orcool managing the pipeline starts at $3K per month. We don't sell story concepts separately.</p></details>
   </div>
 </section>
 
-<!-- FINAL -->
+<!-- FINAL CTA -->
 <section class="dark final">
   <div class="wrap">
     <span class="eyebrow" style="color:var(--red)">Start</span>
-    <h2 style="margin-top:14px">Connect once. Ship your first winning story this week.</h2>
-    <p class="sub" style="margin-top:14px">Two weeks free. No card. Test cheap on your account. Pay for influencer reach when it works.</p>
+    <h2 style="margin-top:14px">Write your first native story today.</h2>
+    <p class="sub" style="margin-top:14px">Two weeks free on your own channels. No card required.</p>
     <div class="btnrow" style="justify-content:center;margin-top:24px">
       <a class="btn light" href="#connect">Connect Orcool</a>
-      <a class="btn on-dark ghost" href="#theloop">See the loop</a>
+      <a class="btn on-dark ghost" href="#loop">See the loop</a>
     </div>
     <p class="note" style="margin-top:18px;text-align:center">No card. No bullshit. Just start.</p>
   </div>
@@ -371,9 +399,9 @@
 
 <footer>
   <div class="wrap">
-    <img src="data:image/png;base64,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 qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY xVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFd qVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4 tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzG Xk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G 3QW3SVWsjXMq+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXM q+NyFwGpUCYxVVHUQ1gFdqVOxI7yBs4tAZwCN/qKxzGXk7WMYpU2U0G3QW3SVWsjXMq+NyFwGpUCY" alt="Orcool" style="height:22px;width:auto;display:block">
-    <div>© 2026 Orcool Inc. Native stories, tested then scaled.</div>
-    <div class="who">team@orcool.com · San Francisco, CA</div>
+    <img class="logo" src="orcool-logo.png" alt="Orcool" style="height:20px">
+    <div>&copy; 2026 Orcool Inc. Native stories that hold attention.</div>
+    <div class="who">team@orcool.com &middot; San Francisco, CA</div>
   </div>
 </footer>
 
